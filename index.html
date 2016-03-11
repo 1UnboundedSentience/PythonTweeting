@@ -2,16 +2,22 @@
 <head>
   <meta charset="UTF-8">
   <title>asdlkfjsaf</title>
-  <script>require('dotenv').config();</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="jquery.min.js"></script>
   <script src="ajax.js"></script>
+  <style src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></style>
+  <script src="js/tempo.js" type="text/javascript"></script>
+  <script>Tempo.prepare("tweets").render(data);</script>
+  <script><?php $url = $_GET['url'];
+  exec("python request.py $url"); ?></script>
 </head>
 <body>
-  <form id="search-form">
+  <form id="navbar-form">
     Search Twitter:<br>
     <input type="text" id="search-field" name="twitter-search" value="Query"><br>
     <input type="submit" value="Submit">
-  </form>
+  </form><br><br>
+Your Random Tweet:
+<div id="random-data"></div>
 
 </body>
 </html>
